@@ -1,0 +1,68 @@
+<dom-module id="gen-inicio">
+  <style is="custom-style">
+    body{
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    paper-toolbar.main{
+      background-color: var(--paper-red-800);
+    }
+    paper-toolbar.drawer{
+      background-color: var(--paper-blue-grey-800);
+    }
+    .menu-trigger{
+      background-color: var(--paper-blue-grey-800);
+      margin-bottom: 5px;
+      color:white;
+    }
+
+  </style>
+  <template>
+    <paper-drawer-panel>
+      <div drawer>
+        <paper-toolbar class="drawer">
+          <span>Opciones</span>
+        </paper-toolbar>
+        <div>
+        <paper-menu>
+                    <paper-submenu>
+                      <paper-item class="menu-trigger">ESO</paper-item>
+                      <paper-menu class="menu-content">
+                        <span>usuario</span>
+                      </paper-menu>
+                    </paper-submenu>
+
+                    <paper-submenu>
+                      <paper-item class="menu-trigger">Primaria</paper-item>
+                      <paper-menu class="menu-content">
+                        <span>usuario</span>
+                      </paper-menu>
+                    </paper-submenu>
+                  </paper-menu>
+            </div>
+      </div>
+      <div main>
+        <paper-toolbar class="main">
+          <paper-icon-button paper-drawer-toggle icon="menu"></paper-icon-button>
+          <span title class="flex"> APP-Usuarios</span>
+        </paper-toolbar>
+      </div>
+    </paper-drawer-panel>
+  </template>
+</dom-module>
+<script>
+Polymer({
+    is: 'gen-inicio',
+    properties:{
+        loading: {
+            type: Boolean,
+            notify: true,
+            value: false
+        },
+    },
+    ready: function(){
+        //
+    },
+});
+</script>
